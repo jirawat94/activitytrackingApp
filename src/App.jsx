@@ -1,13 +1,26 @@
 import { useState } from 'react'
-import './App.css'
+import "../src/Globle.css"
+import "./App.css"
+import Navbar from './component/navbar/navbar'
+import MainSec from './component/Header/Header'
+
 
 function App() {
 
 
   return (
-    <h1>Jirawat </h1>
+
+    <div>
+      <Navbar />
+
+      <MainSec />
+      <div className='MainContent'>
 
 
+
+
+      </div>
+    </div>
   )
 }
 
