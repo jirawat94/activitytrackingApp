@@ -6,8 +6,8 @@ import MainSec from './component/Header/Header'
 import { Route, NavLink, Link, Routes } from 'react-router-dom'
 import { BrowserRouter } from "react-router-dom";
 import Profile from './profile'
-import AddYourData from './add_your_data'
-import DashBord from "./DashBord"
+import Activities from './Activities'
+import DashBoard from "./DashBoard"
 
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes >
-          <Route path="/" element={<DashBord />} />
-          <Route path="/AddActivity" element={<AddYourData />} />
+          <Route path="/" element={<DashBoard />} />
+          <Route path="/AddActivity" element={<Activities />} />
           <Route path="/Profile" element={<Profile />} />
         </Routes>
 
