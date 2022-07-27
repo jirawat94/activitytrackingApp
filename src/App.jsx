@@ -3,6 +3,8 @@ import "../src/Globle.css"
 import "./App.css"
 import Navbar from './component/navbar/navbar'
 import MainSec from './component/Header/Header'
+import Profile from './profile'
+import { BrowserRouter,Routes, Route,} from "react-router-dom";
 
 
 function App() {
@@ -10,16 +12,15 @@ function App() {
 
   return (
 
-    <div>
-      <Navbar />
+    <div className='App'>
+      <BrowserRouter>
+        <Navbar />
+          <Routes>
+            <Route path='/' element={<MainSec />}/>
+            <Route path='/profile' element={<Profile/>}/>
 
-      <MainSec />
-      <div className='MainContent'>
-
-
-
-
-      </div>
+          </Routes>
+      </BrowserRouter>
     </div>
   )
 }
