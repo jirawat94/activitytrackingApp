@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import profilePic from '../../assets/ProfilePic.svg'
+import { Link } from 'react-router-dom'
 
 const navbar = () => {
     return (
@@ -9,8 +10,14 @@ const navbar = () => {
             <div className='navMain'>
                 <div className='navbar-left'>
                     <ul>
-                        <li>Dashbord</li>
-                        <li>Setting</li>
+                        <Link to='/'>
+
+                            <a><li>Dashbord</li></a></Link>
+                        <Link to='/Profile'>
+                            <a><li>Setting</li></a> </Link>
+                        <Link to='/AddActivity'>
+                            <a><li>Activity</li></a> </Link>
+
 
 
                     </ul>
@@ -20,7 +27,7 @@ const navbar = () => {
                 </div>
             </div>
 
-        </nav>
+        </nav >
 
 
     )
