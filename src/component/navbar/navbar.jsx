@@ -12,7 +12,7 @@ const navbar = () => {
                     <ul>
                         <Link to='/'>
 
-                            <a><li>Dashbord</li></a></Link>
+                            <a><li>Dashboard</li></a></Link>
                         <Link to='/Profile'>
                             <a><li>Setting</li></a> </Link>
                         <Link to='/AddActivity'>

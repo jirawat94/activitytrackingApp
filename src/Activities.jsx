@@ -1,6 +1,6 @@
 import React from 'react'
 
-const addYourData = () => {
+const Activities = () => {
     return (
         <div><h1>
             test adddata
@@ -8,4 +8,4 @@ const addYourData = () => {
     )
 }
 
-export default addYourData
+export default Activities

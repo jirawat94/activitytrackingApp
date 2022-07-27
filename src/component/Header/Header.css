@@ -1,4 +1,4 @@
-.Dashbord {
+.Dashboard {
     max-width: 98%;
     ;
     background: linear-gradient(180deg, rgba(26, 42, 108, 0.3) 0%, rgba(178, 31, 31, 0.3) 51.04%, rgba(253, 187, 45, 0.3) 100%);
@@ -9,6 +9,6 @@
 
 }
 
-.Dashbord h1 {
+.Dashboard h1 {
     margin-top: 0px;
 }
