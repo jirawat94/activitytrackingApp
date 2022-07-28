@@ -1,5 +1,6 @@
 form {
     margin: 40px 0;
+    max-height: 50vh;
 }
 
 .fromcard {
