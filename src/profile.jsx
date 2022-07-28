@@ -1,9 +1,15 @@
 import React from 'react'
+import ProfileEdit from './component/ProfileEdit/ProfileEdit'
+
+
+import './profile.css'
 
 const Profile = () => {
     return (
-        <div>
-            <h1>TEST หน้าProfile</h1> </div>
+        
+        <div className='profile'>
+            <ProfileEdit/>
+        </div>
     )
 }
 

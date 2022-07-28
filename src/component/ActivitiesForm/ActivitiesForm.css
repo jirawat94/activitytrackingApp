@@ -1,6 +1,6 @@
 form {
     margin: 40px 0;
-    max-height: 50vh;
+
 }
 
 .fromcard {
@@ -31,6 +31,10 @@ form {
     height: 60px;
     display: flex;
     flex-direction: column;
+}
+
+.manualLable select {
+    border: none;
 }
 
 .manualLable:last-child {
@@ -86,4 +90,5 @@ textarea:focus {
     background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
 }
