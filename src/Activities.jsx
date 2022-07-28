@@ -1,10 +1,12 @@
 import React from 'react'
+import ActivitiesManual from './component/ActivitiesManual/ActivitiesManual'
 
 const Activities = () => {
     return (
-        <div><h1>
-            test adddata
-        </h1></div>
+        <div>
+            <ActivitiesManual />
+
+        </div>
     )
 }
 

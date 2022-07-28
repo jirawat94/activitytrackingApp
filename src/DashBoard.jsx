@@ -1,13 +1,11 @@
 import React from 'react'
+import Header from './component/Header/Header'
 
 const DashBoard = () => {
     return (
         <div>
 
-
-            <h1>
-                test home
-            </h1>
+            <Header />
         </div>
     )
 }
