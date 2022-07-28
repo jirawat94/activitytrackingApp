@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+.profileEdit{
+    margin-top: 30px;
+    
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.09);
+    border-radius: 16px;
+    width: 1280px;
+    
+}
+
+.profileEdit h2{
+    padding-left: 13%;
+    margin-bottom: 0;
+}
+
+.profileEdit-body{
+    display: flex;
+   justify-content: space-around;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+     margin: auto auto;
+     margin-top: 38px;
+     margin-bottom: 10px;
+}
+
+.saveButton{
+    font-size: 14px;
+    height: 40px;
+    padding: 11px 118px;
+    background-color: white; 
+    color: black; 
+    border-image: linear-gradient(45deg, purple, orange) 1;
+    
+}
+.saveButton:hover{
+    background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}

@@ -1,0 +1,57 @@
+ .input-container{
+    width: 35%;
+    /* height: 35px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+} 
+
+ .manualLable {
+    border: 1px solid #657285;
+    border-radius: 4px;
+    margin: 10px 0;
+    width: 75%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.manualLable input{
+    height: 35px;
+    border: none;
+}
+
+.manualLable .genderSelect{
+    width: 100%;
+    border: none;
+}
+
+
+
+.lableName {
+    position: relative;
+    top: -10px;
+}
+
+label {
+    background-color: #FFFFFF;
+    color: #657285;
+    margin: 0 0 0 16px;
+    padding: 0px 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+option{
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+select:focus{
+
+    outline: none;
+}
