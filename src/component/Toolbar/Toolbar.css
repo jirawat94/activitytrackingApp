@@ -1,0 +1,81 @@
+
+.toolbar-container{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+.toolbar-bottom{
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar-bottom-left{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.toolbar-activities {
+ 
+    height: 40px;
+    list-style-type: none;
+    color: #BDBDBD;
+    background-color: #fff;
+    width: 10%;
+    outline: none;
+    border: none;
+}
+
+.toolbar-activities:hover{
+    background: linear-gradient(180deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+    /* border-bottom: 1px solid red; */
+    border-bottom-width:1px ;
+    border-bottom-style: solid ;
+    border-bottom-color: red;
+    
+}
+
+.toolbar-bottom-right{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toolbar-bottom input{
+    width: 140px;
+    height: 40px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+   
+}
+
+.toolbar-bottom .addData{
+    width: 163px;
+    height: 40px;
+    background-color: white; 
+    color: black; 
+    border-image: linear-gradient(45deg, purple, orange) 1;
+    
+    
+}
+
+.toolbar-bottom .addData:hover{
+    background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
+    border-image: linear-gradient(45deg, purple, orange) 1;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}

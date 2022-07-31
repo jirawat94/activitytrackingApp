@@ -8,7 +8,7 @@ import './ProfileEdit.css'
 const ProfileEdit = () => {
   return (
     <div className='profileEdit'>
-        <h2>Setting</h2>
+        <h1>Setting</h1>
         <div className='profileEdit-body'>
             <ChangeProfile/>
             <ProfileForm/>
