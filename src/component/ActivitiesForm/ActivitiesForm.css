@@ -1,6 +1,6 @@
 form {
     margin: 40px 0;
-    
+
 }
 
 .fromcard {
@@ -33,7 +33,7 @@ form {
     flex-direction: column;
 }
 
-.manualLable select{
+.manualLable select {
     border: none;
 }
 
