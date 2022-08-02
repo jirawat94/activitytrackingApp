@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './component/Header/Header'
 import Toolbar from './component/Toolbar/Toolbar'
+import Content from './component/content/Content'
 import './Dashboard.css'
 
 const DashBoard = () => {
@@ -10,7 +11,9 @@ const DashBoard = () => {
                 <Header />
 
             </div>
-            <Toolbar/>
+            <Toolbar />
+            <Content />
+
         </div>
     )
 }
