@@ -79,3 +79,30 @@
     cursor: pointer;
     
 }
+
+#day{
+    background:  url(../../assets/Icon.png);
+    background-repeat: no-repeat;
+    background-position: 99%;
+
+}
+
+#day::-webkit-calendar-picker-indicator{
+    opacity: 0;
+}
+
+/* @media  screen (max-width:767px){
+    
+} */
+
+/*style birthday*/
+#chooseDay{
+    background:  url(../../assets/Icon.png);
+    background-repeat: no-repeat;
+    background-position: 99%;
+
+}
+
+#chooseDay::-webkit-calendar-picker-indicator{
+    opacity: 0;
+}

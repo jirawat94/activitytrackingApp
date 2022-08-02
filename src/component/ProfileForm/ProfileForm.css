@@ -1,13 +1,21 @@
+/* form{
+    width: 35%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} */
+ 
  .input-container{
     width: 35%;
-    /* height: 35px; */
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
 } 
 
- .manualLable {
+ .manualLabel {
     border: 1px solid #657285;
     border-radius: 4px;
     margin: 10px 0;
@@ -17,19 +25,19 @@
     flex-direction: column;
 }
 
-.manualLable input{
+.manualLabel input{
     height: 35px;
     border: none;
 }
 
-.manualLable .genderSelect{
+.manualLabel .genderSelect{
     width: 100%;
     border: none;
 }
 
 
 
-.lableName {
+.labelName {
     position: relative;
     top: -10px;
 }
@@ -54,4 +62,29 @@ input:focus{
 select:focus{
 
     outline: none;
+}
+
+
+/*style birthday*/
+#birthday{
+    background:  url(../../assets/Icon.png);
+    background-repeat: no-repeat;
+    background-position: 99%;
+
+}
+
+#birthday::-webkit-calendar-picker-indicator{
+    opacity: 0;
+}
+
+
+
+@media screen and  (max-width: 768px){
+    .input-container{
+        width: 100%;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

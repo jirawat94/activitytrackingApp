@@ -21,6 +21,7 @@ function App() {
           <Route path="/" element={<DashBoard />} />
           <Route path="/AddActivity" element={<Activities />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route/>
         </Routes>
 
       </BrowserRouter>

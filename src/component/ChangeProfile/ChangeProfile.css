@@ -39,3 +39,15 @@
     font-weight: 500;
     font-size: 14px;
 }
+
+@media screen and  (max-width: 768px){
+
+    .changeProfile{
+        width: 50%;
+    }
+
+    .changeProfile button{
+        width: 100%;
+        margin-bottom: 32px;
+    }
+}

@@ -1,7 +1,10 @@
 import React from 'react'
 import './DailyResult.css'
 
-const DailyResult = () => {
+const DailyResult = (props) => {
+
+
+
     return (
         <div className='daily-result-container'>
             <div className='dashboard-headline'><h1>Daily Result</h1></div>

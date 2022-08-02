@@ -6,23 +6,26 @@ import './ProfileForm.css'
 
 const ProfileForm = () => {
   return (
+    
     <div className='input-container'>
-        <div className='manualLable'>
-            <div className='lableName'>
+      
+        <div className='manualLabel'>
+            <div className='labelName'>
             <label for="name">Name</label>
             </div>
-            <input type="text" id="name"   placeholder="Input your name"/>
+            <input type="text" id="name"   placeholder="Input your name" required/>
         </div>
+        
 
-        <div className='manualLable'>
-            <div className='lableName'>
+        <div className='manualLabel'>
+            <div className='labelName'>
             <label for="name">Birthday</label>
             </div>
-            <input type="date" id="birthday"  placeholder="Select your birthday"/>
+            <input type="date" id="birthday"  placeholder="Select your birthday" required/>
         </div>
 
-        <div className='manualLable'>
-            <div className='lableName'>
+        <div className='manualLabel'>
+            <div className='labelName'>
             <label for="name">Gender</label>
             </div>
             <select className='genderSelect'>
@@ -32,18 +35,18 @@ const ProfileForm = () => {
             </select>          
         </div>
 
-        <div className='manualLable'>
-            <div className='lableName'>
+        <div className='manualLabel'>
+            <div className='labelName'>
             <label for="name">Height</label>
             </div>
-            <input type="text" id="name"  placeholder="Input your height"/>
+            <input type="text" id="name"  placeholder="Input your height" required/>
         </div>
 
-        <div className='manualLable'>
-            <div className='lableName'>
+        <div className='manualLabel'>
+            <div className='labelName'>
             <label for="name">Weight</label>
             </div>
-            <input type="text" id="name"  placeholder="Input your weight"/>
+            <input type="text" id="name"  placeholder="Input your weight" required/>
         </div>
     </div>
   )

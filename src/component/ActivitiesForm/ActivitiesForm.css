@@ -92,3 +92,15 @@ textarea:focus {
     border: none;
     cursor: pointer;
 }
+
+/*style birthday*/
+#birthday{
+    background:  url(../../assets/Icon.png);
+    background-repeat: no-repeat;
+    background-position: 99%;
+
+}
+
+#birthday::-webkit-calendar-picker-indicator{
+    opacity: 0;
+}

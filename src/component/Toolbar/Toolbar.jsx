@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 
 
 import React from 'react'
@@ -47,8 +47,10 @@ const Toolbar = () => {
             }
         </div>
         <div className="toolbar-bottom-right">
-        <input type="date" />
+        <input type="date" id='chooseDay'/>
+        <Link to='/AddActivity'>
         <button className='addData'>Add your data</button>
+        </Link>
         </div>
      </div>
     </div>
