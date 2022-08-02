@@ -47,7 +47,7 @@ const ActivitiesForm = () => {
                 </div>
                 <div className="summitCard">
                     <button>Cancel</button>
-                    <button>Save</button>
+                    <button type='summit'>Save</button>
                 </div>
             </form>
         </div>
