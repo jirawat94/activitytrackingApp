@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 const ActivitiesCard = (props) => {
 const activityDetail = props.activitiesDeatils
-    console.log()
+    
     const [isShow, setIsShow] = useState(false)
     const handlestae = () => {
         setIsShow(true)
