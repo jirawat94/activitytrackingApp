@@ -1,23 +1,26 @@
-
-.toolbar-container{
+.toolbar-container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 
 }
 
-.toolbar-bottom{
+.toolbar-head h1 {
+    font-size: 500px;
+}
+
+.toolbar-bottom {
     display: flex;
     justify-content: center;
 }
 
-.toolbar-bottom{
+.toolbar-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.toolbar-bottom-left{
+.toolbar-bottom-left {
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -25,7 +28,7 @@
 }
 
 .toolbar-activities {
- 
+
     height: 40px;
     list-style-type: none;
     color: #BDBDBD;
@@ -35,60 +38,64 @@
     border: none;
 }
 
-.toolbar-activities:hover{
+.toolbar-activities:hover {
     background: linear-gradient(180deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     cursor: pointer;
     /* border-bottom: 1px solid red; */
-    border-bottom-width:1px ;
-    border-bottom-style: solid ;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
     border-bottom-color: red;
-    
+
 }
 
-.toolbar-bottom-right{
+.toolbar-bottom-right {
     width: 50%;
     display: flex;
     justify-content: space-between;
 }
 
-.toolbar-bottom input{
+.toolbar-bottom input {
     width: 140px;
     height: 40px;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
-   
+
 }
 
-.toolbar-bottom .addData{
+.toolbar-bottom .addData {
     width: 163px;
     height: 40px;
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border-image: linear-gradient(45deg, purple, orange) 1;
-    
-    
+
+
+
+
+
+
 }
 
-.toolbar-bottom .addData:hover{
+.toolbar-bottom .addData:hover {
     background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
     border-image: linear-gradient(45deg, purple, orange) 1;
     border: none;
     color: white;
     cursor: pointer;
-    
+
 }
 
-#day{
-    background:  url(../../assets/Icon.png);
+#day {
+    background: url(../../assets/Icon.png);
     background-repeat: no-repeat;
     background-position: 99%;
 
 }
 
-#day::-webkit-calendar-picker-indicator{
+#day::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
@@ -97,13 +104,13 @@
 } */
 
 /*style birthday*/
-#chooseDay{
-    background:  url(../../assets/Icon.png);
+#chooseDay {
+    background: url(../../assets/Icon.png);
     background-repeat: no-repeat;
     background-position: 99%;
 
 }
 
-#chooseDay::-webkit-calendar-picker-indicator{
+#chooseDay::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
