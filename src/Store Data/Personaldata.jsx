@@ -8,47 +8,26 @@ export const PersonalData = [{
         height: 168,
         birthday: "18 / 08 / 1990",
         id: 3,
-        activity:[[run,{activityname:"run for who",
+        activity:[{
+            type:"run",
+            activityname:"run for who",
             date:"03/10/22",
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
-           calories: 300},
-           {activityname:"run for who",
-           date:"03/10/22",
-           duration:1.30,
-           description:"วิ่งสนุกฉิบหาย",
-          calories: 300},
-          {activityname:"run for who",
-          date:"03/10/22",
-          duration:1.30,
-          description:"วิ่งสนุกฉิบหาย",
-         calories: 300}],[bike,{activityname:"bike for who",
-            Date:"03/10/22",
-            duration:1.30,
-            description:"วิ่งสนุกฉิบหาย",
-            calories: 300},{activityname:"bike for who",
-            Date:"03/10/22",
-            duration:1.30,
-            description:"วิ่งสนุกฉิบหาย",
-            calories: 300},{activityname:"bike for who",
-            Date:"03/10/22",
-            duration:1.30,
-            description:"วิ่งสนุกฉิบหาย",
-            calories: 300}]]
-    },]
-
-{
-            type:"run",
-            
+           calories: 300
         },
         {
             type:"bike",
-            
+            activityname:"bike for who",
+            date:"03/10/22",
+            duration:1.30,
+            description:"วิ่งสนุกฉิบหาย",
+            calories: 300
         },
         {
             type:"walk",
             activityname:"walk for who",
-            Date:"03/10/22",
+            date:"03/10/22",
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
             calories: 300
@@ -56,7 +35,7 @@ export const PersonalData = [{
         {
             type:"swim",
             activityname:"swim for who",
-            Date:"03/10/22",
+            date:"03/10/22",
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
             calories: 300
@@ -64,7 +43,7 @@ export const PersonalData = [{
         {
             type:"hike",
             activityname:"hike for who",
-            Date:"03/10/22",
+            date:"03/10/22",
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
             calories: 300
