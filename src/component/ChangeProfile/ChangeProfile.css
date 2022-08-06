@@ -1,31 +1,31 @@
-.changeProfile{
+.changeProfile {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.ProfilePic{
+.ProfilePic {
     margin-bottom: 23px;
     width: 75%;
 }
 
-.changeProfile button{
+.changeProfile button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75%;
     height: 40px;
     padding: 11px 23px;
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border-image: linear-gradient(45deg, purple, orange) 1;
- 
-    
+
+
 
 }
 
-.changeProfile button:hover{
+.changeProfile button:hover {
     background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
     border-image: linear-gradient(45deg, purple, orange) 1;
     border: none;
@@ -33,20 +33,20 @@
     cursor: pointer;
 }
 
-.changeProfile button a{
+.changeProfile button a {
     text-decoration: none;
     margin: 11px 23px;
     font-weight: 500;
     font-size: 14px;
 }
 
-@media screen and  (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .changeProfile{
+    .changeProfile {
         width: 50%;
     }
 
-    .changeProfile button{
+    .changeProfile button {
         width: 100%;
         margin-bottom: 32px;
     }

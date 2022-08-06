@@ -8,21 +8,42 @@ export const PersonalData = [{
         height: 168,
         birthday: "18 / 08 / 1990",
         id: 3,
-        activity:[{
-            type:"run",
-            activityname:"run for who",
+        activity:[[run,{activityname:"run for who",
             date:"03/10/22",
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
-           calories: 300
-        },
-        {
-            type:"bike",
-            activityname:"bike for who",
+           calories: 300},
+           {activityname:"run for who",
+           date:"03/10/22",
+           duration:1.30,
+           description:"วิ่งสนุกฉิบหาย",
+          calories: 300},
+          {activityname:"run for who",
+          date:"03/10/22",
+          duration:1.30,
+          description:"วิ่งสนุกฉิบหาย",
+         calories: 300}],[bike,{activityname:"bike for who",
             Date:"03/10/22",
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
-            calories: 300
+            calories: 300},{activityname:"bike for who",
+            Date:"03/10/22",
+            duration:1.30,
+            description:"วิ่งสนุกฉิบหาย",
+            calories: 300},{activityname:"bike for who",
+            Date:"03/10/22",
+            duration:1.30,
+            description:"วิ่งสนุกฉิบหาย",
+            calories: 300}]]
+    },]
+
+{
+            type:"run",
+            
+        },
+        {
+            type:"bike",
+            
         },
         {
             type:"walk",
@@ -47,10 +68,7 @@ export const PersonalData = [{
             duration:1.30,
             description:"วิ่งสนุกฉิบหาย",
             calories: 300
-        },]
-    }]
-
-
+        },
 
 
 
