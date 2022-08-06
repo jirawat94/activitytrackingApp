@@ -6,7 +6,7 @@
 }
 
 .toolbar-head h1 {
-    font-size: 500px;
+    font-size: 45px;
 }
 
 .toolbar-bottom {
@@ -36,7 +36,7 @@
     width: 10%;
     outline: none;
     border: none;
-    
+
 }
 
 .toolbar-activities:hover {
