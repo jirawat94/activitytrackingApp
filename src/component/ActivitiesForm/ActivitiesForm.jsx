@@ -8,7 +8,7 @@ const ActivitiesForm = () => {
     return (
         
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className='activity-form' onSubmit={handleSubmit}>
                 <div className="fromcard">
                     <div className="manualLable">
                         <div className="lableName">

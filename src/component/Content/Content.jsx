@@ -2,9 +2,12 @@ import React from 'react'
 import ActivitiesCard from '../ActivitiesCard/ActivitiesCard'
 import "./Content.css"
 
-const Content = () => {
+const Content = (props) => {
+
     return (
-        <div className=' content-container'><ActivitiesCard /><ActivitiesCard /><ActivitiesCard /></div>
+        <div className=' content-container'>
+            <ActivitiesCard activitiesDeatils={props.filterCard}/>
+            </div>
     )
 }
 

@@ -13,7 +13,7 @@ export const PersonalData = [{
             activityname:"run for who",
             date:"03/10/22",
             duration:1.30,
-            descrition:"วิ่งสนุกฉิบหาย",
+            description:"วิ่งสนุกฉิบหาย",
            calories: 300
         },
         {
@@ -21,7 +21,7 @@ export const PersonalData = [{
             activityname:"bike for who",
             Date:"03/10/22",
             duration:1.30,
-            descrition:"วิ่งสนุกฉิบหาย",
+            description:"วิ่งสนุกฉิบหาย",
             calories: 300
         },
         {
@@ -29,7 +29,7 @@ export const PersonalData = [{
             activityname:"walk for who",
             Date:"03/10/22",
             duration:1.30,
-            descrition:"วิ่งสนุกฉิบหาย",
+            description:"วิ่งสนุกฉิบหาย",
             calories: 300
         },
         {
@@ -37,7 +37,7 @@ export const PersonalData = [{
             activityname:"swim for who",
             Date:"03/10/22",
             duration:1.30,
-            descrition:"วิ่งสนุกฉิบหาย",
+            description:"วิ่งสนุกฉิบหาย",
             calories: 300
         },
         {
@@ -45,7 +45,7 @@ export const PersonalData = [{
             activityname:"hike for who",
             Date:"03/10/22",
             duration:1.30,
-            descrition:"วิ่งสนุกฉิบหาย",
+            description:"วิ่งสนุกฉิบหาย",
             calories: 300
         },]
     }]
