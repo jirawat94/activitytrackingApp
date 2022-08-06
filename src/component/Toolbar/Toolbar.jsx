@@ -1,58 +1,84 @@
 import { Link } from 'react-router-dom'
+import Content from '../content/Content'
+import { PersonalData } from '../../Store Data/Personaldata'
 
-
-import React from 'react'
+import React, {useState} from 'react'
 
 import './Toolbar.css'
 
 const activitieList = [
   {
-    name : 'All'
+    name : 'All',
+    value : 'all'
 
   },
   {
-    name : 'Run'
+    name : 'Run',
+    value : 'run'
 
   },
   {
-    name : 'Walk'
+    name : 'Walk',
+    value : 'walk'
 
   },
   {
-    name : 'Bicycle'
+    name : 'Bicycle',
+    value : 'bicycle'
 
   },
   {
-    name : 'Swim'
+    name : 'Swim',
+    value : 'swim'
 
   },
   {
-    name : 'Hike'
+    name : 'Hike',
+    value : 'hike'
 
   },
 ]
 
 const Toolbar = () => {
-  return (
+  const [showActivities, setShowActivities] = useState('run')
+  let cardValue = '';
+  if(PersonalData[0].activity.type === showActivities){
     
-    <div className='toolbar-container'>
-     <div className='toolbar-head'>
-        <h1>Your Activities</h1>
-     </div>
-     <div className='toolbar-bottom'>
-        
-        <div className="toolbar-bottom-left">
-        {
-              activitieList.map((name,index) => <button key={index} className='toolbar-activities'>{name.name}</button>)
-            }
-        </div>
-        <div className="toolbar-bottom-right">
-        <input type="date" id='chooseDay'/>
-        <Link to='/AddActivity'>
-        <button className='addData'>Add your data</button>
-        </Link>
-        </div>
-     </div>
+    PersonalData[0].activity.type.filter((value) =>{
+      
+    })
+  }
+
+  const handleShowActivities = (e) =>{
+    setShowActivities(e.target.value)
+  }
+
+  return (
+    <div>
+      <div className='toolbar-container'>
+      <div className='toolbar-head'>
+          <h1>Your Activities</h1>
+      </div>
+      <div className='toolbar-bottom'>
+          
+          <div className="toolbar-bottom-left">
+          {
+                activitieList.map((name,index) => <button key={index} className='toolbar-activities' onClick={handleShowActivities} value={name.value} >{name.name}</button>)
+              }
+          </div>
+          <div className="toolbar-bottom-right">
+          <input type="date" id='chooseDay'/>
+          <Link to='/AddActivity'>
+          <button className='addData'>Add your data</button>
+          </Link>
+          </div>
+      </div>
+      </div>
+
+      <div>
+        <Content filterCard={cardValue}/>
+      </div>
+
     </div>
     
   )
