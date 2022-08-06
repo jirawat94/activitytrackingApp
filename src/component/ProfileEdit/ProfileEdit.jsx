@@ -12,7 +12,8 @@ const ProfileEdit = () => {
   }
 
   return (
-    <form onSubmit={handleChangeProfile}>
+    
+    <form  onSubmit={handleChangeProfile}>
     <div className='profileEdit'>
         <h1>Setting</h1>
         <div className='profileEdit-body'>

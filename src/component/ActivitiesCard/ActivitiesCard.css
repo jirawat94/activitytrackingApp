@@ -1,7 +1,7 @@
 .ActivityCard {
     border: 1px solid blueviolet;
     width: 28%;
-
+    margin:20px;
     border-radius: 15px;
     padding: 10px;
     display: flex;
@@ -112,4 +112,12 @@
 
 .datasection p {
     padding-top: 10px;
+}
+
+.display-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
