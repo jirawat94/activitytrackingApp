@@ -6,7 +6,14 @@ import React from 'react'
 import './ProfileEdit.css'
 
 const ProfileEdit = () => {
+
+  const handleChangeProfile = () =>{
+    return alert('save')
+  }
+
   return (
+    
+    <form  onSubmit={handleChangeProfile}>
     <div className='profileEdit'>
         <h1>Setting</h1>
         <div className='profileEdit-body'>
@@ -14,9 +21,10 @@ const ProfileEdit = () => {
             <ProfileForm/>
         </div>
         <div className='button-container'>
-        <button className='saveButton'>Save</button>
+        <button className='saveButton'  type="submit">Save</button>
         </div>
     </div>
+    </form>
   )
 }
 

@@ -13,7 +13,10 @@
 
 .profileEdit h1{
     padding-left: 80px;
-    margin-bottom: 0;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .profileEdit-body{
@@ -45,4 +48,28 @@
     color: white;
     cursor: pointer;
     
+}
+
+@media screen and  (max-width: 768px){
+
+.profileEdit h1{
+    padding-left: 5%;
+    width: 50%;
+    font-weight: 500;
+    font-size: 23px;
+    color: #414141;
+}
+
+.profileEdit-body{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+
+
+
+
 }
