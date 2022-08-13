@@ -1,13 +1,7 @@
 import React from "react";
 import ActivitiesCard from "../ActivitiesCard/ActivitiesCard";
 import "./Content.css";
-import { PersonalData } from "../../Store Data/Personaldata"; import { PersonalData } from '../../Store Data/Personaldata'
-
-
-
-
-
-
+import { PersonalData } from "../../Store Data/Personaldata";
 
 const Content = (props) => {
   const test = PersonalData[0].activity.filter((activity, idx) => {

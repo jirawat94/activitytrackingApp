@@ -41,7 +41,7 @@ const Toolbar = () => {
   };
 
   return (
-    <div>
+    <div >
       <div className="toolbar-container">
         <div className="toolbar-head">
           <h1>Your Activities</h1>
@@ -62,7 +62,7 @@ const Toolbar = () => {
           <div className="toolbar-bottom-right">
             <input type="date" id="chooseDay" />
             <Link to="/AddActivity">
-              <button className="addData">Add your data</button>
+              <button className="addData"><p>Add your data</p></button>
             </Link>
           </div>
         </div>

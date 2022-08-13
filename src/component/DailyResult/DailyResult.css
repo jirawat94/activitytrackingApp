@@ -50,3 +50,7 @@
     text-align: center;
 
 }
+
+.dashboard-headline h1 {
+    margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 .ActivityCard {
     border: 1px solid blueviolet;
-    width: 28%;
-    margin:20px;
+    width: 24%;
+    margin: 20px;
     border-radius: 15px;
     padding: 10px;
     display: flex;
@@ -26,6 +26,7 @@
     font-weight: 500;
     color: #292929;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .activity-namelable h2 {
@@ -44,19 +45,15 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    height: 25px;
 
 
 }
 
 .freespace {
-    width: 80%;
+    width: 60%;
 }
 
-.activity-namelable img {
-
-    width: 5%;
-    object-fit: contain;
-}
 
 .activitypicmain {
     display: flex;
@@ -70,38 +67,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
 }
 
-.edit-section {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    position: relative;
-    left: 40px;
-    bottom: 19px;
-
-
-}
-
-.edit-section button {
-    width: 100%;
-    background-color: white;
-    border: 0;
-    padding: 5px;
-    border-bottom: #1A2A6C 1px solid;
-    color: #414141
-}
-
-.edit-section button:hover {
-    background-color: rgb(240, 240, 240);
-}
-
-.edit-section button:active {
-    background-color: #292929;
-    color: aliceblue;
-}
 
 .datasection {
     display: flex;
@@ -114,7 +82,7 @@
     padding-top: 10px;
 }
 
-.display-card{
+.display-card {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
