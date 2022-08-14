@@ -9,12 +9,9 @@ import { Link } from 'react-router-dom'
 
 const ActivitiesCard = (props) => {
     const activityDetail = props.activitiesDeatils
-    // // const [isShow, setIsShow] = useState()
-    // const handleremove = () => {
-    //     return false
-    // }
-    const removeMeetball = () => {
-        return document.getElementsByClassName("edit-section").style.display = "none";
+    const [isShow, setIsShow] = useState(false)
+    const handleremove = () => {
+        return false
     }
 
     return (
@@ -25,7 +22,7 @@ const ActivitiesCard = (props) => {
 
                         <div className='activity-namelable' >
                             <h2>{value.type}</h2>
-                            <Meetball />
+                            <Meetball isShow={isShow}/>
                         </div>
                         <div >
                             <div className='datasection'  >
@@ -36,7 +33,7 @@ const ActivitiesCard = (props) => {
                                 <img src={RunPic} ></img>
                             </div>
                             <p>{value.description}</p>
-                            <h3 onClick={removeMeetball}>calories {value.calories}</h3>
+                            <h3>calories {value.calories}</h3>
 
                         </div>
 

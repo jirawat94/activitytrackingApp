@@ -1,35 +1,31 @@
-import React, { useState } from 'react'
-import meetballmenu from "../../assets/meatball_2.png"
-import './Meetball.css'
-
+import React, { useState } from "react";
+import meetballmenu from "../../assets/meatball_2.png";
+import "./Meetball.css";
 
 const Meetball = (props) => {
-    const [isShow, setIsShow] = useState(false)
-    const handlestate = () => {
-        setIsShow(true)
-    }
+//   const [isShow, setIsShow] = useState(false);
+//   const handlestate = () => {
+//     setIsShow(true);
+//   };
 
-    const handleremoves = () => {
-        setIsShow(false)
-    }
+//   const handleremoves = () => {
+//     setIsShow(false);
+//   };
 
-    return (
+  return (
+    <div className="meetballMenu">
+      
+      <img src={meetballmenu}  />
+      { props.isShow ? (
+        <div className="edit-section  ">
+          
+          <button>edit</button>
+       
+          <button>delete</button>
+        </div>
+      ) : null}
+    </div>
+  );
+};
 
-
-        <div className='meetballMenu' onClick={handlestate}> <img src={meetballmenu} />{
-            isShow ?
-                <div className='edit-section  '>
-                    {/* <Link to='/AddActivity'> */}
-                    <button>
-                        edit
-                    </button>
-                    {/* </Link> */}
-                    <button>
-                        delete
-                    </button>
-                </div> : null
-        }  </div >
-    )
-}
-
-export default Meetball
+export default Meetball;

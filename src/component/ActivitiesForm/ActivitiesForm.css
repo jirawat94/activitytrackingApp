@@ -93,6 +93,26 @@ textarea:focus {
     cursor: pointer;
 }
 
+.actForm-span{
+    text-align: center;
+    font-size: 12px;
+    padding: 0px;
+    color: red;
+    display: none;
+}
+
+.actForm-span-type{
+    text-align: center;
+    font-size: 12px;
+    padding-top: 100px;
+    color: red;
+    display: none;
+}
+
+input:invalid ~ .actForm-span {
+    display: block;
+}
+
 /*style birthday*/
 #birthday{
     background:  url(../../assets/Icon.png);
