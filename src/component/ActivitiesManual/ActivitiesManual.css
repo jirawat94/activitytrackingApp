@@ -1,4 +1,3 @@
-
 .manualCard {
     max-width: 1280px;
 
@@ -13,4 +12,10 @@
 .manualCard h1 {
     margin: 0 0 0 80px;
     padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .manualCard {
+        width: 100%;
+    }
 }
