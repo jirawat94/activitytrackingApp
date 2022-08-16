@@ -1,12 +1,16 @@
+html {
+    font-size: calc(60% + 0.8vmin);
+}
+
 .activity-form{
-    margin: 40px 0;
+    margin: 2.5rem 0 auto;
 
 }
 
 .fromcard {
-    width: 35%;
+    width: 25rem;
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,8 +19,8 @@
 
 .fromcard input {
     border: none;
-    height: 35px;
-    padding: 5px;
+    height: 2.2rem;
+    padding: 0.3rem;
 }
 
 .fromcard input:focus {
@@ -25,10 +29,10 @@
 
 .manualLable {
     border: 1px solid #657285;
-    border-radius: 4px;
-    margin: 10px 0;
+    border-radius: 0.25rem;
+    margin: 0.625rem 0;
     width: 75%;
-    height: 60px;
+    height: 3.75rem;
     display: flex;
     flex-direction: column;
 }
@@ -38,20 +42,20 @@
 }
 
 .manualLable:last-child {
-    height: 120px;
+    height: 7.5rem;
 }
 
 .lableName {
     position: relative;
-    top: -10px;
+    top: -0.625rem;
 }
 
 label {
     background-color: #FFFFFF;
     color: #657285;
-    margin: 0 0 0 16px;
-    padding: 0px 5px;
-    font-size: 14px;
+    margin: 0 0 0 1rem;
+    padding: 0px 0.4rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -67,8 +71,8 @@ textarea:focus {
 .summitCard {
     width: 35%;
     height: 100%;
-    margin: 40px auto;
-    padding-bottom: 40px;
+    margin: 2.5rem auto;
+    padding-bottom: 2.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -76,14 +80,14 @@ textarea:focus {
 }
 
 .summitCard button {
-    width: 40%;
-    height: 40px;
-    font-size: 16px;
+    width: 45%;
+    height: 2.5rem;
+    font-size: 1rem;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.699);
     background-color: white;
     border-image: linear-gradient(45deg, purple, orange) 1;
-    box-shadow: 0px 4px 6px rgba(114, 136, 181, 0.21);
+    box-shadow: 0rem 0.25rem 0.375rem rgba(114, 136, 181, 0.21);
 }
 
 .summitCard button:hover {
