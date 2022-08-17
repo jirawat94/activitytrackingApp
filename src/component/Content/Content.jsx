@@ -3,6 +3,7 @@ import ActivitiesCard from "../ActivitiesCard/ActivitiesCard";
 import "./Content.css";
 import { PersonalData } from "../../Store Data/Personaldata";
 
+
 const Content = (props) => {
   const test = PersonalData[0].activity.filter((activity, idx) => {
     if (
@@ -12,10 +13,20 @@ const Content = (props) => {
       return activity;
     }
   });
-  console.log(test);
+
+  const activityInfo = test
+
+  console.log(activityInfo);
   return (
     <div className=" content-container">
-      <ActivitiesCard activitiesDeatils={test} />
+      {
+        activityInfo.map(value => {
+          return <ActivitiesCard
+            activitiesDeatils={value} />
+        })
+
+      }
+      {/* <ActivitiesCard activitiesDeatils={activityInfo} /> */}
     </div>
   );
 };

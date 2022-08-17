@@ -4,10 +4,13 @@ import './DailyResult.css'
 
 //Try to use memo
 const DailyResult = (props) => {
+
+
+
     const totalduration = props.activity.reduce((previousValue, currentValue) => previousValue + currentValue.duration,
-        0)
+        0);
     const toalcalories = props.activity.reduce((previousValue, currentValue) => previousValue + currentValue.calories, 0
-    )
+    );
 
     return (
         <div className='daily-result-container'>

@@ -10,25 +10,30 @@ import Activities from './Activities'
 import DashBoard from "./DashBoard"
 import Loginpage from "./Loginpage"
 import { useState } from "react"
+import Singuppage from "./Singuppage"
+import { AuthContextProvider } from "./component/context/AuthContext"
 
 
 function App() {
-
-  const [isAuth, setAuth] = useState(true)
-
 
   return (
 
     <div>
 
       <BrowserRouter>
-        {isAuth ? <Navbar /> : null}
-        <Routes >
-          <Route path="/" element={<DashBoard />} />
-          <Route path="/AddActivity" element={<Activities />} />
-          <Route path="/Profile" element={<Profile />} />
-          <Route path="/login" element={<Loginpage />} />
-        </Routes>
+        <AuthContextProvider>
+
+          <Routes >
+            <Route path="/" element={<Loginpage />} />;
+            <Route path="/signup" element={<Singuppage />} />;
+            <Route path="/AddActivity" element={<Activities />} />;
+            <Route path="/Profile" element={<Profile />} />;
+            <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/login" element={<Loginpage />} />;
+          </Routes>
+
+        </AuthContextProvider>
+
 
       </BrowserRouter>
 
