@@ -25,8 +25,8 @@ const Header = () => {
                     <br />
                     - Thomas Jefferson -</p>
 
-            </div>
-            <div className='dailly-container'>
+                </div>
+                <div className='dailly-container'>
                 <DailyResult activity={activity} />
             </div>
 
