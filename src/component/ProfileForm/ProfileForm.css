@@ -81,10 +81,47 @@ select:focus{
 
 @media screen and  (max-width: 768px){
     .input-container{
-        width: 100%;
+        width: 45%;
        
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+     .manualLabel {
+        border: 1px solid #657285;
+        border-radius: 0.25rem;
+        margin: 0.625rem 0;
+        width: 75%;
+        height: 3.75rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .manualLabel input{
+        height: 2.188rem;
+        border: none;
+    }
+    
+    .manualLabel .genderSelect{
+        width: 100%;
+        border: none;
+    }
+    
+    
+    
+    .labelName {
+        position: relative;
+        top: -0.625rem;
+    }
+    
+    label {
+        background-color: #FFFFFF;
+        color: #657285;
+        margin: 0 0 0 1rem;
+        padding: 0px 0.313rem;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
 }

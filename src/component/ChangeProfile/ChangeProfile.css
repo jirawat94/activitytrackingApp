@@ -7,7 +7,6 @@
 
 .ProfilePic {
     margin-bottom: 23px;
-    width: 75%;
 }
 
 .changeProfile button {
@@ -47,7 +46,13 @@
     }
 
     .changeProfile button {
-        width: 100%;
-        margin-bottom: 32px;
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .ProfilePic {
+        margin-bottom: 1.4rem;
+        align-items: center;
+        width: 65%;
     }
 }
