@@ -92,7 +92,7 @@ select:focus{
         border: 1px solid #657285;
         border-radius: 0.25rem;
         margin: 0.625rem 0;
-        width: 75%;
+        width: 70%;
         height: 3.75rem;
         display: flex;
         flex-direction: column;

@@ -12,16 +12,13 @@
 }
 
 .profileEdit h1{
-    padding-left: 80px;
-    margin-bottom: 40px;
+    margin: 0 0 0 80px;
     padding-top: 20px;
-    font-size: 2em;
-    font-weight: bold;
 }
 
 .profileEdit-body{
     display: flex;
-   justify-content: space-around;
+    justify-content: space-around;
 }
 
 .button-container{
@@ -63,15 +60,16 @@
     }
 
     .profileEdit h1{
-        padding-left: 5%;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        text-align: center;
         width: 50%;
-        font-weight: 500;
-        font-size: 1.4rem;
-        color: #414141;
+        font-weight: bold;
+        font-size: 2em;
     }
 
     .profileEdit-body{
-    width: 100%;
+    width: 80rem;
     display: flex;
     flex-direction: column;
     align-items: center;
