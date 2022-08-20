@@ -23,7 +23,7 @@ const Loginpage = () => {
     };
     return (
         <div>
-            <h1> Login เลยยยย ยังไม่มีก็ไปสมัครก่อนจ้า <Link to='/signup'>กดโลดด</Link></h1>
+            <h1> Login เลยยยย ยังไม่มีก็ไปสมัครก่อนจ้าsfdsfdsfsdfsdfsdfadf <Link to='/signup'>กดโลดด</Link></h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
