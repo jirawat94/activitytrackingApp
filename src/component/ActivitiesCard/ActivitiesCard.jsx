@@ -16,7 +16,17 @@ const ActivitiesCard = (props) => {
 
     const handleRemove = () => {
         setIsShow(false)
-    }
+    };
+
+    const allcalories = (props) => {
+        const allminute = activityDetail.duration * 60
+
+        if (activityDetail.type === "run") {
+            return allminute * 17
+        };
+    };
+
+
 
     return (
         <div className='display-card'>
@@ -49,7 +59,7 @@ const ActivitiesCard = (props) => {
                         <img src={RunPic} onClick={handlestate}></img>
                     </div>
                     <p>{activityDetail.description}</p>
-                    <h3>calories {activityDetail.calories}</h3>
+                    <h3>calories {allcalories()}</h3>
 
                 </div>
 

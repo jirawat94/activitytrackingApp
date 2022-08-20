@@ -17,6 +17,7 @@ export const AuthContextProvider = ({ children }) => {
     const logout = () => {
         return signOut(auth);
     };
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             console.log(currentUser);
@@ -28,7 +29,7 @@ export const AuthContextProvider = ({ children }) => {
         }
     }, [])
     return (
-        <UserContext.Provider value={{ createUser, logout, login, }}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{ createUser, user, logout, login, }}>{children}</UserContext.Provider>
     )
 }
 export const UserAuth = () => {
