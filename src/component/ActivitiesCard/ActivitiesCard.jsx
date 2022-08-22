@@ -56,7 +56,8 @@ const ActivitiesCard = (props) => {
                 </div>
                 <div onClick={handleRemove}>
                     <div className='datasection'  >
-                        <p >{activityDetail.date}</p>
+                        {/* <p >{activityDetail.date.slice(0, 10)}</p> */}
+                        <p >{new Date(activityDetail.date).toLocaleDateString()}</p>
                     </div>
                     <h1>{activityDetail.title}</h1>
                     <div className="activitypicmain">
