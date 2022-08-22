@@ -22,6 +22,7 @@
 }
 
 .profileEdit-body {
+    max-width: 1280px;
     display: flex;
     justify-content: space-around;
 }
@@ -66,7 +67,8 @@
     }
 
     .profileEdit h1{
-        padding-bottom: 20px;
+        padding-bottom: 25px;
+        padding-right: 7%;
         margin: 0 auto;
         text-align: center;
         width: 50%;
@@ -74,12 +76,11 @@
         font-size: 2em;
     }
 
-        .profileEdit-body {
-         width: 80rem;
+    .profileEdit-body {
          display: flex;
          flex-direction: column;
          align-items: center;
-        }
+    }
 
     .saveButton{
         font-size: 0.875rem;

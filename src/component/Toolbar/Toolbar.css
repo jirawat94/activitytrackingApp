@@ -12,10 +12,11 @@
 
 
 
-.toolbar-bottom {
+/* .toolbar-bottom {
     display: flex;
     justify-content: center;
-}
+    border: 1px solid red;
+} */
 
 .toolbar-bottom {
     display: flex;
@@ -112,10 +113,6 @@
 
 }
 
-/* @media  screen (max-width:767px){
-    
-} */
-
 /*style birthday*/
 #chooseDay {
     background: url(../../assets/Icon.png);
@@ -130,4 +127,45 @@
 
 input[type="date"] {
     padding: 0 10px;
+}
+
+
+@media screen and  (max-width: 425px) {
+    .toolbar-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+
+    .toolbar-activities {
+
+        height: 2.5rem;
+        width: 3.125rem;
+        list-style-type: none;
+        color: #575757;
+        background-color: #fff;
+        outline: none;
+        border: none;
+        font-weight: 400;
+    
+    }
+
+    .toolbar-bottom-right {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .toolbar-bottom-left {
+        display: flex;
+        flex-direction: row;
+        width: 55%;
+        justify-content: flex-start;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
 }
