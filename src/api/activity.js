@@ -55,7 +55,7 @@ export const updateActivity = async (id, { title, date, duration, type, calories
 
     return api.put(`/activities/${id}`, {
         title,
-        date: new date.toISOString(),
+        date,
         duration,
         type,
         calories,
