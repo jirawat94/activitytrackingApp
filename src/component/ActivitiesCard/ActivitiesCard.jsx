@@ -1,14 +1,24 @@
 import React from 'react'
 import "./ActivitiesCard.css"
-import RunPic from "../../assets/running_1.png"
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import meatballmenu from '../../assets/meatball_2.png'
 import '../Meetball/Meetball.css'
+import run from '../../assets/running.png'
+import bike from '../../assets/bicycle.png'
+import hike from '../../assets/hiking.png'
+import swim from '../../assets/swimmer.png'
+import walk from '../../assets/walking.png'
+
+import { Link, useNavigate } from 'react-router-dom'
+
+
+
 
 const ActivitiesCard = (props) => {
     const activityDetail = props.activitiesDeatils
     const [isShow, setIsShow] = useState(false)
+
+
     const handlestate = () => {
         setIsShow(true);
 
@@ -16,15 +26,9 @@ const ActivitiesCard = (props) => {
 
     const handleRemove = () => {
         setIsShow(false)
+
     };
 
-    const allcalories = (props) => {
-        const allminute = activityDetail.duration * 60
-
-        if (activityDetail.type === "run") {
-            return allminute * 17
-        };
-    };
 
 
 
@@ -38,13 +42,13 @@ const ActivitiesCard = (props) => {
                     <div className='meetballMenu' onClick={handlestate}  > <img src={meatballmenu} />{
                         isShow ?
                             <div className='edit-section  '>
-                                <Link to='/AddActivity'>
+                                <Link to={`/AddActivity/${activityDetail._id}`}>
                                     <button>
                                         edit
                                     </button>
                                 </Link>
-                                {/* </Link> */}
-                                <button>
+
+                                <button onClick={() => { props.handleDelete(activityDetail._id) }} >
                                     delete
                                 </button>
                             </div> : null
@@ -54,19 +58,33 @@ const ActivitiesCard = (props) => {
                     <div className='datasection'  >
                         <p >{activityDetail.date}</p>
                     </div>
-                    <h1>{activityDetail.activityname}</h1>
+                    <h1>{activityDetail.title}</h1>
                     <div className="activitypicmain">
-                        <img src={RunPic} onClick={handlestate}></img>
+                        {
+                            activityDetail.type === 'run' ? <img src={run} /> :
+                                activityDetail.type === 'walk' ? <img src={walk} /> :
+                                    activityDetail.type === 'bike' ? <img src={bike} /> :
+                                        activityDetail.type === 'swim' ? <img src={swim} /> :
+                                            activityDetail.type === 'hike' ? <img src={hike} /> : null
+
+
+                        }
                     </div>
                     <p>{activityDetail.description}</p>
-                    <h3>calories {allcalories()}</h3>
+                    <footer>
+                        <h3>calories {activityDetail.calories}  </h3><span>🔥</span>
+                    </footer>
+
+
+
+
 
                 </div>
 
             </div>
 
 
-        </div>
+        </div >
     )
 }
 

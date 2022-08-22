@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 
 const ActivitiesManual = () => {
     return (
-        
-           
-            <div class="manualCard">
-                <h1>Manual Activity</h1>
-                <ActivitiesForm />
-            </div>
-        
+
+
+        <div className="manualCard">
+            <h1>Manual Activity</h1>
+            <ActivitiesForm />
+        </div>
+
     )
 }
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Content from "../content/Content";
-import { PersonalData } from "../../Store Data/Personaldata";
+import { activitiesByDate } from '../../api/activity.js'
 
 import React, { useState } from "react";
 
@@ -33,13 +33,31 @@ const activitieList = [
   },
 ];
 
+
+
+
 const Toolbar = () => {
   const [showActivities, setShowActivities] = useState("all");
+
+
+  // const [selectDate, setSelectDate] = useState(new Date())
+  let selectByDate = []
+
+  const handleSetDate = async (e) => {
+
+    // setSelectDate(e.target.value)
+    selectByDate = await activitiesByDate(e.target.value)
+
+    // console.log(selectByDate.data.result)
+    // setShowActivities(selectByDate.data.result)
+  }
+
 
   const handleShowActivities = (e) => {
     return setShowActivities(e.target.value);
   };
 
+  console.log(showActivities)
   return (
     <div >
       <div className="toolbar-container">
@@ -60,16 +78,16 @@ const Toolbar = () => {
             ))}
           </div>
           <div className="toolbar-bottom-right">
-            <input type="date" id="chooseDay" />
+            <input type="date" id="chooseDay" onChange={handleSetDate} />
             <Link to="/AddActivity">
-              <button className="addData"><p>Add your data</p></button>
+              <button className="addData" ><p>Add your data</p></button>
             </Link>
           </div>
         </div>
       </div>
 
       <div>
-        <Content activitiesTypes={showActivities} />
+        <Content activitiesTypes={showActivities} Dateselect={selectByDate} />
       </div>
     </div>
   );

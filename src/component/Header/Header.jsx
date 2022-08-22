@@ -4,25 +4,42 @@ import React from 'react'
 import './Header.css'
 import Headerpic from "../../assets/amico.png"
 import DailyResult from '../DailyResult/DailyResult'
-import { PersonalData } from '../../Store Data/Personaldata'
 import { useState } from 'react'
+import { getMe } from '../../api/Users.js'
+import { useEffect } from 'react'
+import { useContext } from "react";
+import { UserContext } from "../context/AuthContext";
 
 
-const Header = () => {
-    const nameProfile = PersonalData[0].name
-    const activity = PersonalData[0].activity
+const Header = (props) => {
+    const [userinfo, setUserinfo] = useState([])
+    const { user } = useContext(UserContext);
 
 
+    const getMefunc = async () => {
+        const response = await getMe()
+        setUserinfo(response.data.result)
+    };
 
-    // const [personal] = PersonalData
-    // console.log(personal)
+    useEffect(() => {
+        if (user) {
+            getMefunc()
+            return;
+        }
+        if (user === null) {
+            window.location = '/';
+        }
+    }, [user]);
+
+
+    console.log(userinfo)
     return (
         <div className='Dashboard'>
             <img src={Headerpic} alt="" className='pic-pc' />
 
             <div className='Dashboard-right'>
                 <div className='Dashboard-content'>
-                    <h1>Hi {nameProfile} </h1>
+                    <h1>Hi {userinfo.name} </h1>
                     <p>“If you want something you’ve never had,<br />you must be willing to do something you’ve never done.”
                         <br />
                         - Thomas Jefferson -</p>
@@ -31,7 +48,7 @@ const Header = () => {
                 <div className='dailly-container'>
                     <img src={Headerpic} alt="" className='pic-mobile' />
 
-                    <DailyResult activity={activity} />
+                    <DailyResult />
                 </div>
 
 

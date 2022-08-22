@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { async } from '@firebase/util';
 import { UserAuth } from './component/context/AuthContext';
+import { createProfile } from './api/Users.js'
 
 
 const Singuppage = () => {
@@ -12,12 +13,18 @@ const Singuppage = () => {
     const { createUser } = UserAuth()
     const navigate = useNavigate()
 
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setError('')
         try {
             await createUser(email, password);
+
+            await createProfile(email)
+            console.log(email)
             navigate('/Profile')
+
         } catch (e) {
             setError(e.message);
             console.log(e.message);

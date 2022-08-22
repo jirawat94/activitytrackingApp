@@ -18,6 +18,7 @@ export const getMe = async () => {
 export const updateProfile = async ({ name, gender, birthdate, height, weight }) => {
     const auth = getAuth()
     const token = await auth.currentUser.getIdToken(true)
+    console.log({ name, gender, birthdate, height, weight })
     return api.put('/users/me', { name, gender, birthdate, height, weight }, {
         headers: {
             Authorization: token

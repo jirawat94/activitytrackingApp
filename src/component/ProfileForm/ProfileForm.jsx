@@ -1,15 +1,17 @@
 
 import React from 'react'
 import './ProfileForm.css'
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { UserAuth } from '../context/AuthContext';
+import { updateProfile } from '../../api/Users'
+import { async } from '@firebase/util';
 
 
 const ProfileForm = () => {
     const user = UserAuth().user.email
     const [userInfo, setUserInfo] = useState({
         name: "",
-        age: "",
+        birthdate: "",
         gender: "",
         height: "",
         weight: "",
@@ -21,15 +23,23 @@ const ProfileForm = () => {
         setUserInfo({
             ...userInfo,
             [event.target.name]: value,
+
         });
     }
 
 
-    const handleSummit2 = (event) => {
-        event.preventDefault();
-        console.log(userInfo)
-    }
+    const onSubmit = async (event) => {
+        // const birthdate = dayjs(values.birthdate).toISOString();
+        console.log("test")
+        try {
+            event.preventDefault()
+            await updateProfile(userInfo)
 
+            alert('Update profile success')
+        } catch (err) {
+            alert('Update profile failed')
+        }
+    }
 
 
 
@@ -52,10 +62,10 @@ const ProfileForm = () => {
 
                 <div className='manualLabel'>
                     <div className='labelName'>
-                        <label for="age">Birthday</label>
+                        <label for="birthdate">Birthday</label>
                     </div>
-                    <input type="date" id="birthday" placeholder="Select your birthday" name="age"
-                        value={userInfo.age}
+                    <input type="date" id="birthdate" placeholder="Select your birthday" name="birthdate"
+                        value={userInfo.birthdate}
                         onChange={handleChange} required />
                 </div>
 
@@ -89,9 +99,7 @@ const ProfileForm = () => {
                         value={userInfo.weight}
                         onChange={handleChange} required />
                 </div>
-                <h1>{user}</h1>
-
-                <button className="saveButton" onClick={handleSummit2} >
+                <button className="saveButton" onClick={onSubmit} >
                     Save
                 </button>
 

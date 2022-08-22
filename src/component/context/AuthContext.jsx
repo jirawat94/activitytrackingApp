@@ -4,9 +4,9 @@ import { auth } from "../../config";
 
 
 
-const UserContext = createContext()
+export const UserContext = createContext()
 export const AuthContextProvider = ({ children }) => {
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState(undefined)
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };

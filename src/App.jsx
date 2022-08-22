@@ -26,7 +26,8 @@ function App() {
           <Routes >
             <Route path="/" element={<Loginpage />} />;
             <Route path="/signup" element={<Singuppage />} />;
-            <Route path="/AddActivity" element={<Activities />} />;
+            <Route path="/AddActivity/:activityId" element={<Activities />} />;
+            <Route path="/AddActivity/" element={<Activities />} />;
             <Route path="/Profile" element={<Profile />} />;
             <Route path="/dashboard" element={<DashBoard />} />
             <Route path="/login" element={<Loginpage />} />;
