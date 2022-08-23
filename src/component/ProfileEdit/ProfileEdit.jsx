@@ -23,9 +23,6 @@ const ProfileEdit = () => {
     }
   }
 
-  const handlesave = () => {
-
-  }
 
   return (
 
@@ -38,7 +35,7 @@ const ProfileEdit = () => {
       </div>
 
       <div className='button-container'>
-        {/* <button className='saveButton' type="submit">Save</button> */}
+
       </div>
       <div className='button-container'>
         <button className='saveButton' onClick={handleLogout}>Logout</button>

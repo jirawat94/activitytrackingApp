@@ -1,14 +1,22 @@
 
 import React from 'react'
 import './ProfileForm.css'
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { UserAuth } from '../context/AuthContext';
 import { updateProfile } from '../../api/Users'
 import { async } from '@firebase/util';
-
+import { useContext } from "react";
+import { UserContext } from "../context/AuthContext";
+import { getMe } from '../../api/Users.js'
+import { useNavigate } from 'react-router-dom';
 
 const ProfileForm = () => {
-    const user = UserAuth().user.email
+
+    const navigate = useNavigate()
+    const { user } = useContext(UserContext);
+
+    // const user = UserAuth().user.email
+
     const [userInfo, setUserInfo] = useState({
         name: "",
         birthdate: "",
@@ -27,15 +35,47 @@ const ProfileForm = () => {
         });
     }
 
+    const getMefunc = async () => {
+        const response = await getMe()
+
+        const birthdate = response.data.result.birthdate.split('T')[0]
+        console.log("birtdate," + birthdate)
+
+        setUserInfo({
+            name: response.data.result.name,
+            birthdate: birthdate,
+            gender: response.data.result.gender,
+            height: response.data.result.height,
+            weight: response.data.result.weight,
+        }
+        )
+    };
+
+
+    useEffect(() => {
+        if (user) {
+            getMefunc()
+            return;
+
+        }
+        if (user === null) {
+            window.location = '/';
+        }
+
+    }, [user]);
+
+    console.log(userInfo)
+
 
     const onSubmit = async (event) => {
         // const birthdate = dayjs(values.birthdate).toISOString();
-        console.log("test")
+
         try {
             event.preventDefault()
             await updateProfile(userInfo)
-
             alert('Update profile success')
+            navigate('/dashboard')
+
         } catch (err) {
             alert('Update profile failed')
         }

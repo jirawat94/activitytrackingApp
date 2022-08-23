@@ -35,23 +35,7 @@
     margin-bottom: 10px;
 }
 
-.saveButton {
-    font-size: 14px;
-    height: 40px;
-    padding: 11px 118px;
-    background-color: white;
-    color: black;
-    border-image: linear-gradient(45deg, purple, orange) 1;
 
-}
-
-.saveButton:hover {
-    background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
-    border: none;
-    color: white;
-    cursor: pointer;
-
-}
 
 @media screen and (max-width: 768px) {
 

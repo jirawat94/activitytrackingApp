@@ -5,17 +5,17 @@
     flex-direction: column;
     justify-content: space-around;
 } */
- 
- .input-container{
+
+.input-container {
     width: 35%;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
-} 
+}
 
- .manualLabel {
+.manualLabel {
     border: 1px solid #657285;
     border-radius: 4px;
     margin: 10px 0;
@@ -25,12 +25,12 @@
     flex-direction: column;
 }
 
-.manualLabel input{
+.manualLabel input {
     height: 35px;
     border: none;
 }
 
-.manualLabel .genderSelect{
+.manualLabel .genderSelect {
     width: 100%;
     border: none;
 }
@@ -42,6 +42,25 @@
     top: -10px;
 }
 
+.saveButton {
+    font-size: 14px;
+    width: 75%;
+    height: 40px;
+    padding: 11px 118px;
+    background-color: white;
+    color: black;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+
+}
+
+.saveButton:hover {
+    background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+
 label {
     background-color: #FFFFFF;
     color: #657285;
@@ -51,38 +70,38 @@ label {
     text-align: center;
 }
 
-option{
+option {
     border: none;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
-select:focus{
+select:focus {
 
     outline: none;
 }
 
 
 /*style birthday*/
-#birthday{
-    background:  url(../../assets/Icon.png);
+#birthday {
+    background: url(../../assets/Icon.png);
     background-repeat: no-repeat;
     background-position: 99%;
 
 }
 
-#birthday::-webkit-calendar-picker-indicator{
+#birthday::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
 
 
-@media screen and  (max-width: 768px){
-    .input-container{
+@media screen and (max-width: 768px) {
+    .input-container {
         width: 100%;
-       
+
         display: flex;
         justify-content: center;
         align-items: center;

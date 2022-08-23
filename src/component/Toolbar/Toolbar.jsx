@@ -50,15 +50,15 @@ const Toolbar = (props) => {
 
 
   // const [selectDate, setSelectDate] = useState(new Date())
-  let selectByDate = []
+  // let selectByDate = []
 
   // const handleSetDate = async (e) => {
 
-  //   // setSelectDate(e.target.value)
-  //   selectByDate = await activitiesByDate(e.target.value)
+  // setSelectDate(e.target.value)
+  // selectByDate = await activitiesByDate(e.target.value)
 
-  //   // console.log(selectByDate.data.result)
-  //   // setShowActivities(selectByDate.data.result)
+  // console.log(selectByDate.data.result)
+  // setShowActivities(selectByDate.data.result)
   // }
 
 
@@ -130,7 +130,7 @@ const Toolbar = (props) => {
             ))}
           </div>
           <div className="toolbar-bottom-right">
-            <input type="date" id="chooseDay" />
+            <input type="date" id="chooseDay" onChange={props.handleSetDate} />
             <Link to="/AddActivity">
               <button className="addData" ><p>Add your data</p></button>
             </Link>

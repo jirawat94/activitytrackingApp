@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { deleteActivity } from '../src/api/activity.js'
 import { getMe } from '../src/api/Users.js'
 import { getTotal } from '../src/api/activity.js'
+import { activitiesByDate } from '../src/api/activity.js'
 
 
 
@@ -46,6 +47,21 @@ const DashBoard = () => {
         setUserinfo(response.data.result)
     };
 
+    const [selectDate, setSelectDate] = useState(new Date())
+    let selectByDate = []
+
+    const handleSetDate = async (e) => {
+
+        setSelectDate(e.target.value)
+        selectByDate = await activitiesByDate(e.target.value)
+
+        console.log(selectByDate.data.result)
+        setActivities(selectByDate.data.result)
+    }
+
+
+
+
     useEffect(() => {
         if (user) {
             getMefunc()
@@ -75,12 +91,6 @@ const DashBoard = () => {
     };
     console.log(total)
 
-
-
-
-
-
-
     return (
         <div>
             <Navbar />
@@ -92,6 +102,7 @@ const DashBoard = () => {
             </div>
             <Toolbar activities={activities}
                 handleDelete={handleDelete}
+                handleSetDate={handleSetDate}
             />
         </div>
     )
