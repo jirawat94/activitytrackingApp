@@ -2,9 +2,16 @@ import { Link } from "react-router-dom";
 import Content from "../content/Content";
 import { activitiesByDate } from '../../api/activity.js'
 
-import React, { useState } from "react";
+
 
 import "./Toolbar.css";
+
+import { useState, useEffect } from "react";
+import { getActivities } from "../../api/activity.js"
+import { useContext } from "react";
+import { UserContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { deleteActivity } from '../../api/activity.js'
 
 const activitieList = [
   {
@@ -38,6 +45,8 @@ const activitieList = [
 
 const Toolbar = () => {
   const [showActivities, setShowActivities] = useState("all");
+  const [activities, setActivities] = useState([])
+  const { user } = useContext(UserContext);
 
 
   // const [selectDate, setSelectDate] = useState(new Date())
@@ -58,6 +67,49 @@ const Toolbar = () => {
   };
 
   console.log(showActivities)
+
+
+
+
+  const getActivitiesList = async () => {
+    // setActivities(props.Dateselect)
+    if (!activities) {
+      return
+    } const response = await getActivities()
+    if (!response.data?.result?.length) return
+    setActivities(() => [...response.data.result])
+  };
+
+  const handleDelete = async (id) => {
+    if (typeof id === 'undefined') return
+    await deleteActivity(id)
+    await getActivitiesList()
+
+
+  }
+
+  useEffect(() => {
+    if (user) {
+      getActivitiesList()
+      return;
+    }
+    if (user === null) {
+      window.location = '/';
+    }
+  }, [user]);
+
+
+  const fiterActivities = activities.filter((activity, idx) => {
+    if (
+      activity.type === showActivities ||
+      showActivities === "all"
+    ) {
+      return activity;
+    }
+  });
+
+
+
   return (
     <div >
       <div className="toolbar-container">
@@ -87,7 +139,10 @@ const Toolbar = () => {
       </div>
 
       <div>
-        <Content activitiesTypes={showActivities} Dateselect={selectByDate} />
+        <Content
+          fiterActivities={fiterActivities}
+          handleDelete={handleDelete}
+        />
       </div>
     </div>
   );

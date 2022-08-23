@@ -12,53 +12,14 @@ import { deleteActivity } from '../../api/activity.js'
 
 const Content = (props) => {
 
-  const [activities, setActivities] = useState([])
-  const { user } = useContext(UserContext);
-
-  const getActivitiesList = async () => {
-    setActivities(props.Dateselect)
-    if (!activities) {
-      return
-    } const response = await getActivities()
-    if (!response.data?.result?.length) return
-    setActivities(() => [...response.data.result])
-  };
-
-  const handleDelete = async (id) => {
-    if (typeof id === 'undefined') return
-    await deleteActivity(id)
-    await getActivitiesList()
-
-
-  }
-
-  useEffect(() => {
-    if (user) {
-      getActivitiesList()
-      return;
-    }
-    if (user === null) {
-      window.location = '/';
-    }
-  }, [user]);
-
-
-  const fiterActivities = activities.filter((activity, idx) => {
-    if (
-      activity.type === props.activitiesTypes ||
-      props.activitiesTypes === "all"
-    ) {
-      return activity;
-    }
-  });
-
+  // const [activities, setActivities] = useState([])ขอเปิดไมค์แปบ
 
   return (
     <div className=" content-container">
       {
-        fiterActivities.map((value, idx) => {
+        props.fiterActivities.map((value, idx) => {
           return <ActivitiesCard key={idx}
-            activitiesDeatils={value} handleDelete={handleDelete} />
+            activitiesDeatils={value} handleDelete={props.handleDelete} />
         })
 
       }
