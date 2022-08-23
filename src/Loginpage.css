@@ -7,9 +7,9 @@
 
 .back-ground img {
     background-position: center;
-    /* background-size: cover; */
-    max-width: 90rem;
-    max-height: 50rem;
+    background-size: contain;
+    max-width: 120rem;
+    max-height: 56rem;
 }
 
 .container {
@@ -125,4 +125,22 @@ input[type="submit"]:hover{
 
 .signup_link a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .back-ground img {
+        background-position: center;
+        background-position: cover;
+        width: 90rem;
+        height: 50rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .back-ground img {
+        background-position: center;
+        background-position: cover;
+        width: 100rem;
+        height: 60rem;
+    }
 }
