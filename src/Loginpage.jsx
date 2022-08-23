@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from './component/context/AuthContext'
 
+import './Loginpage.css'
+
 const Loginpage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -23,20 +25,26 @@ const Loginpage = () => {
         }
     };
     return (
-        <div>
-            <h1> Login เลยยยย ยังไม่มีก็ไปสมัครก่อนจ้า <Link to='/signup'>กดโลดด</Link></h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" clasNames="form-control" id="exampleInputEmail1" onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" onChange={(e) => setPassword(e.target.value)} />
-                </div>
-
-                <button type="submit" >Login</button>
-            </form>
+        <div class="back-ground">
+            <div class="container">
+                <h1> Login  </h1>
+                <form onSubmit={handleSubmit}>
+                    <div class="txt_field">
+                        <input type="email" clasNames="form-control" id="exampleInputEmail1" required onChange={(e) => setEmail(e.target.value)} />
+                        <span></span>
+                        <label for="exampleInputEmail1" className="form-label">Email address</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" className="form-control" id="exampleInputPassword1" required onChange={(e) => setPassword(e.target.value)} />
+                        <span></span>
+                        <label for="exampleInputPassword1" className="form-label">Password</label>
+                    </div>
+                    <input type="submit" value="Login" />
+                    <div class="signup_link">
+                        Not a member? <a href='/signup'>Click Here</a>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }

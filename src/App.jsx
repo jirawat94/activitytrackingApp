@@ -10,7 +10,7 @@ import Activities from './Activities'
 import DashBoard from "./DashBoard"
 import Loginpage from "./Loginpage"
 import { useState } from "react"
-import Singuppage from "./Singuppage"
+import Singuppage from "./Signuppage"
 import { AuthContextProvider } from "./component/context/AuthContext"
 
 
