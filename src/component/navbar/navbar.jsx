@@ -10,7 +10,7 @@ const navbar = () => {
             <div className='navMain'>
                 <div className='navbar-left'>
                     <ul>
-                        <Link to='/'>
+                        <Link to='/dashboard'>
 
                             <a><li>Dashboard</li></a></Link>
                         <Link to='/Profile'>

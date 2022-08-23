@@ -39,7 +39,7 @@ const Header = (props) => {
 
             <div className='Dashboard-right'>
                 <div className='Dashboard-content'>
-                    <h1>Hi {userinfo.name} </h1>
+                    <h1>Hi {userinfo.name} 👏</h1>
                     <p>“If you want something you’ve never had,<br />you must be willing to do something you’ve never done.”
                         <br />
                         - Thomas Jefferson -</p>

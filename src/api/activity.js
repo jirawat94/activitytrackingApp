@@ -82,11 +82,11 @@ export const deleteActivity = async (id) => {
     })
 }
 
-export const getTotal = async (day) => {
+export const getTotal = async (date) => {
     const auth = getAuth()
     if (!auth.currentUser) throw new Error('Unauthorized')
     const token = await auth.currentUser.getIdToken(true)
-    return api.get(`/aggregates/${day}`, {
+    return api.get(`/aggregates/?date=${date}`, {
         headers: {
             Authorization: token
         }

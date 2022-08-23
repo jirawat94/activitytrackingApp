@@ -44,6 +44,10 @@
     text-align: center;
     margin: 0 0 10px 0;
     object-fit: cover;
+    background: linear-gradient(90deg, #1A2A6C 0%, #B21F1F 51.04%, #FDBB2D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .dashboard-headline {
@@ -52,7 +56,11 @@
 }
 
 .dashboard-headline h1 {
-    margin-bottom: 20px;
+    margin-bottom: 4px;
+}
+
+.dashboard-headline h2 {
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 768px) {
