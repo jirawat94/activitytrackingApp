@@ -8,34 +8,34 @@ import { getTotal } from '../../api/activity.js'
 //Try to use memo
 const DailyResult = (props) => {
 
-    const date = new Date().toISOString().split('T')[0]
-        ;
+    // const date = new Date().toISOString().split('T')[0]
+    //     ;
     const date2 = new Date().toLocaleDateString()
 
-    const [total, setTotal] = useState([])
+    // const [total, setTotal] = useState([])
     const { user } = useContext(UserContext);
 
-    const geTotalfunc = async () => {
-        const response = await getTotal(date)
-        setTotal(response.data.result[0])
+    // const geTotalfunc = async () => {
+    //     const response = await getTotal(date)
+    //     setTotal(response.data.result[0])
 
-        // console.log("res", response)
-        // console.log("agrr", total)
-    };
-    console.log(total)
-
+    //     // console.log("res", response)
+    //     // console.log("agrr", total)
+    // };
 
 
 
-    useEffect(() => {
-        if (user) {
-            geTotalfunc()
-            return;
-        }
-        if (user === null) {
-            window.location = '/';
-        }
-    }, [user]);
+
+
+    // useEffect(() => {
+    //     if (user) {
+    //         geTotalfunc()
+    //         return;
+    //     }
+    //     if (user === null) {
+    //         window.location = '/';
+    //     }
+    // }, [user]);
 
 
 
@@ -50,14 +50,14 @@ const DailyResult = (props) => {
                         Total Duration
                     </h2>
                     <p>
-                        {total && total.total_duration}
+                        {props.total && props.total.total_duration}
                     </p></div>
                 <div className='dashboard-info'>
                     <h2>
                         Calories Burned
                     </h2>
                     <p>
-                        {total && total.total_calories}
+                        {props.total && props.total.total_calories}
                     </p>
 
                 </div>

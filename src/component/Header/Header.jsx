@@ -12,24 +12,24 @@ import { UserContext } from "../context/AuthContext";
 
 
 const Header = (props) => {
-    const [userinfo, setUserinfo] = useState([])
-    const { user } = useContext(UserContext);
+    // const [userinfo, setUserinfo] = useState([])
+    // const { user } = useContext(UserContext);
+    const userinfo = props.userinfo
 
+    // const getMefunc = async () => {
+    //     const response = await getMe()
+    //     setUserinfo(response.data.result)
+    // };
 
-    const getMefunc = async () => {
-        const response = await getMe()
-        setUserinfo(response.data.result)
-    };
-
-    useEffect(() => {
-        if (user) {
-            getMefunc()
-            return;
-        }
-        if (user === null) {
-            window.location = '/';
-        }
-    }, [user]);
+    // useEffect(() => {
+    //     if (user) {
+    //         getMefunc()
+    //         return;
+    //     }
+    //     if (user === null) {
+    //         window.location = '/';
+    //     }
+    // }, [user]);
 
 
     console.log(userinfo)
@@ -48,7 +48,7 @@ const Header = (props) => {
                 <div className='dailly-container'>
                     <img src={Headerpic} alt="" className='pic-mobile' />
 
-                    <DailyResult />
+                    <DailyResult total={props.total} />
                 </div>
 
 

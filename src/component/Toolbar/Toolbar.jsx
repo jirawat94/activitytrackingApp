@@ -43,10 +43,10 @@ const activitieList = [
 
 
 
-const Toolbar = () => {
+const Toolbar = (props) => {
   const [showActivities, setShowActivities] = useState("all");
-  const [activities, setActivities] = useState([])
-  const { user } = useContext(UserContext);
+  // const [activities, setActivities] = useState([])
+  // const { user } = useContext(UserContext);
 
 
   // const [selectDate, setSelectDate] = useState(new Date())
@@ -66,40 +66,40 @@ const Toolbar = () => {
     return setShowActivities(e.target.value);
   };
 
-  console.log(showActivities)
+  // console.log(showActivities)
 
 
 
 
-  const getActivitiesList = async () => {
-    // setActivities(props.Dateselect)
-    if (!activities) {
-      return
-    } const response = await getActivities()
-    if (!response.data?.result?.length) return
-    setActivities(() => [...response.data.result])
-  };
+  // const getActivitiesList = async () => {
+  //   // setActivities(props.Dateselect)
+  //   if (!activities) {
+  //     return
+  //   } const response = await getActivities()
+  //   if (!response.data?.result?.length) return
+  //   setActivities(() => [...response.data.result])
+  // };
 
-  const handleDelete = async (id) => {
-    if (typeof id === 'undefined') return
-    await deleteActivity(id)
-    await getActivitiesList()
-
-
-  }
-
-  useEffect(() => {
-    if (user) {
-      getActivitiesList()
-      return;
-    }
-    if (user === null) {
-      window.location = '/';
-    }
-  }, [user]);
+  // const handleDelete = async (id) => {
+  //   if (typeof id === 'undefined') return
+  //   await deleteActivity(id)
+  //   await getActivitiesList()
 
 
-  const fiterActivities = activities.filter((activity, idx) => {
+  // }
+
+  // useEffect(() => {
+  //   if (user) {
+  //     getActivitiesList()
+  //     return;
+  //   }
+  //   if (user === null) {
+  //     window.location = '/';
+  //   }
+  // }, [user]);
+
+
+  const fiterActivities = props.activities.filter((activity, idx) => {
     if (
       activity.type === showActivities ||
       showActivities === "all"
@@ -141,7 +141,7 @@ const Toolbar = () => {
       <div>
         <Content
           fiterActivities={fiterActivities}
-          handleDelete={handleDelete}
+          handleDelete={props.handleDelete}
         />
       </div>
     </div>
