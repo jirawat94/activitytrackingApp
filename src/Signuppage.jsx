@@ -3,8 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { async } from '@firebase/util';
 import { UserAuth } from './component/context/AuthContext';
+import img from '../src/Store Data/PersonalPic/loginpage.jpg'
 
-// import './Signuppage'
+
 
 const Signuppage = () => {
     const [email, setEmail] = useState('')
@@ -26,6 +27,7 @@ const Signuppage = () => {
     }
     return (
         <div class="back-ground">
+            <img src={img} alt="ProfilePicSetting" className='ProfilePic'/>
             <div class="container">
                     <h1>Sign up</h1>
                     <form onSubmit={handleSubmit}>

@@ -1,4 +1,4 @@
-
+import img from '../src/Store Data/PersonalPic/loginpage.jpg'
 import { async } from '@firebase/util'
 import React from 'react'
 import { useState } from 'react'
@@ -26,6 +26,7 @@ const Loginpage = () => {
     };
     return (
         <div class="back-ground">
+            <img src={img} alt="ProfilePicSetting" className='ProfilePic'/>
             <div class="container">
                 <h1> Login  </h1>
                 <form onSubmit={handleSubmit}>
