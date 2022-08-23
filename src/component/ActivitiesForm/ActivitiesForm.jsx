@@ -5,6 +5,9 @@ import { createActivity, getActivityById, updateActivity } from '../../api/activ
 import { useNavigate, useParams } from "react-router";
 
 const ActivitiesForm = () => {
+
+    const navigate = useNavigate()
+
     const param = useParams()
     const [activityInfo, setActivityInfo] = useState({
         calories: "",
@@ -29,7 +32,9 @@ const ActivitiesForm = () => {
         }
     }, [param?.activityId])
 
-
+    const handleCancle = () => {
+        navigate('/dashboard')
+    }
 
     const handleChange = (event) => {
         const value = event.target.value;
@@ -73,6 +78,7 @@ const ActivitiesForm = () => {
             console.log(e.message);
         }
         alert('Send Activities')
+        navigate('/dashboard')
     }
 
     return (
@@ -131,10 +137,12 @@ const ActivitiesForm = () => {
                 </div>
 
                 <div className="summitCard">
-                    <button>Cancel</button>
+
                     <button type="submit">Save</button>
                 </div>
             </form>
+            <div className="summitCard "> <button onClick={handleCancle}>Cancel</button> </div>
+
         </div>
     )
 }

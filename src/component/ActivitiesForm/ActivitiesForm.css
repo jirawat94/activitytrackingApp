@@ -1,5 +1,5 @@
-.activity-form{
-    margin: 40px 0;
+.activity-form {
+    margin: 40px 0 0 0;
 
 }
 
@@ -67,13 +67,14 @@ textarea:focus {
 .summitCard {
     width: 35%;
     height: 100%;
-    margin: 40px auto;
-    padding-bottom: 40px;
+    margin: 10px auto 0 auto;
+    padding-bottom: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 
 .summitCard button {
     width: 40%;
@@ -94,13 +95,13 @@ textarea:focus {
 }
 
 /*style birthday*/
-#birthday{
-    background:  url(../../assets/Icon.png);
+#birthday {
+    background: url(../../assets/Icon.png);
     background-repeat: no-repeat;
     background-position: 99%;
 
 }
 
-#birthday::-webkit-calendar-picker-indicator{
+#birthday::-webkit-calendar-picker-indicator {
     opacity: 0;
 }

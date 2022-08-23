@@ -17,8 +17,8 @@ const Content = (props) => {
   return (
     <div className=" content-container">
       {
-        props.fiterActivities.map((value, idx) => {
-          return <ActivitiesCard key={idx}
+        props.fiterActivities.map((value) => {
+          return <ActivitiesCard key={value._id}
             activitiesDeatils={value} handleDelete={props.handleDelete} />
         })
 

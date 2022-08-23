@@ -13,9 +13,9 @@ import { useNavigate } from 'react-router-dom';
 const ProfileForm = () => {
 
     const navigate = useNavigate()
-    const { user } = useContext(UserContext);
+    // const { user } = useContext(UserContext);
 
-    // const user = UserAuth().user.email
+    const user = UserAuth().user.email
 
     const [userInfo, setUserInfo] = useState({
         name: "",
