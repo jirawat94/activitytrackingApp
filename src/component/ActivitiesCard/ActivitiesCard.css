@@ -1,6 +1,6 @@
 .ActivityCard {
     border: 1px solid blueviolet;
-    width: 24%;
+    width: 80%;
     margin: 20px;
     border-radius: 15px;
     padding: 10px;
@@ -51,7 +51,7 @@
 }
 
 .freespace {
-    width: 60%;
+    width: 70%;
 }
 
 
@@ -83,9 +83,29 @@
 }
 
 .display-card {
-    width: 100%;
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .display-card {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .display-card {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
